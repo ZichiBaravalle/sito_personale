@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=, initial-scale=1.0">
+        <link rel="stylesheet" href="https://developers.google.com/fonts/docs/getting_started">
+        <link rel="stylesheet" href="generale.css">
+        <link rel="shortcut icon" href="letter-z_8207040.ico" type="image/x-icon">
+        <title>Home | Zichi Baravalle</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="about.html">About me</a>
+            </nav>
+        </header>
+        <main>
+            <h1>Ciao, sono Zichi Baravalle</h1>
+            <p>
+                Sono uno studente del IIS vallauri di Fossano, frequento la III superiore e sono nel settore informatico.    
+                <h2>Linguaggi: </h2>
+                <div id="linguaggi">
+                    <div id="just-dance">
+                        <img src="img/c-programming.svg" alt="logo linguaggio C">
+                        <p id="di-fianco-al-logo">
+                            Il primo linguaggio che ho imparato è stato C e tutt'ora sto imparando tutti i suoi usi. <br> Come ad esempio la crezione di liste, l'allocamento in memoria e l'uso dei bit. <br><br>
+                            Questo qua sotto invece è un simpatico e complicato programma in C con il goto che crea un albero in console inserendo il numero della grandezza con la variabile.
+                        </p>
+                    </div>
+                    <br>
+                    <br>
+                    <pre>
+void DisegnaAlberoGOTO(int grandezza){
+    int cont = 1, spazi = grandezza - 1, livelli = 0;
+    int stelle = 1;
+    loop_principale:
+    if(cont != grandezza)
+    {
+        stelle = 0;
+        seconda_stella:
+        if(stelle == 1)
+        {
+            spazi = ((livelli - 1) * 2) + 1;
+        }
+        else
+            spazi = grandezza - cont;
+        spazi:
+        if (spazi > 0 && stelle == 0) {
+            printf(" ");
+            spazi--;
+            goto spazi;
+        }
+        spazi2:
+        if(spazi > 0 && stelle == 1)
+        {
+            printf(" ");
+            spazi--;
+            goto spazi2;
+        }
+        else
+        {
+            printf("*");
+            stelle++;
+        }
+        if(cont > 1 && stelle == 1)
+            livelli++;
+        if(livelli == 0 || stelle > 1)
+        {
+            printf("\n");
+            cont++;
+            goto loop_principale;
+        }
+        else
+            goto seconda_stella;
+    }
+    cont = 0;
+    fondo:
+    if (cont < (grandezza * 2) - 1) {
+        printf("*");
+        cont++;
+        goto fondo;
+    }
+}
+                    </pre>
+                </div>
+            </p>
+        </main>
+        <footer>
+            <p>&copy; 2024 Zichi Baravalle</p>
+        </footer>
+    </body>
+</html>
