@@ -52,12 +52,11 @@ img{
     width: 100px;
     height: auto;
 }
-#just-dance{
+#linguaggi > div{
     width: 500px;
     display: flex;
 }
 pre{
-    max-width: 400px;
     background-color: #1f1f1f;
 }
 #linguaggi{
@@ -78,7 +77,13 @@ pre{
     background-color: #394A46;
     border-radius: 10px;
 }
-#di-fianco-al-logo{
+#linguaggi > div > p{
     width: 400px;
     height: auto;
+}
+p > a{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
