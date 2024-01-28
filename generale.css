@@ -124,3 +124,6 @@ section{
 section > p{
     margin-left: 10px;
 }
+#albero{
+    overflow: visible;
+}
